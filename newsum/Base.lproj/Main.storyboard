@@ -57,7 +57,7 @@
                                 <rect key="frame" x="280" y="215" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="/"/>
+                                <state key="normal" title="*"/>
                                 <connections>
                                     <action selector="ButtonDiv:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EUa-bw-C2O"/>
                                 </connections>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="280" y="305" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="*"/>
+                                <state key="normal" title="/"/>
                                 <connections>
                                     <action selector="ButtonMub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4H3-Iw-6nA"/>
                                 </connections>
@@ -130,6 +130,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="point:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rh1-BA-Ote"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-4m-mXs">
                                 <rect key="frame" x="280" y="383" width="56" height="56"/>
@@ -158,11 +161,11 @@
                                     <action selector="ButtonRes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z47-EA-qiz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-O8-Qeh">
-                                <rect key="frame" x="20" y="117" width="339" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-O8-Qeh">
+                                <rect key="frame" x="20" y="117" width="339" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ8-qH-igW">
@@ -172,7 +175,6 @@
                                 <state key="normal" title="c"/>
                                 <connections>
                                     <action selector="ButtonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9GY-XR-SVh"/>
-                                    <action selector="button3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q6w-d7-hLd"/>
                                 </connections>
                             </button>
                         </subviews>

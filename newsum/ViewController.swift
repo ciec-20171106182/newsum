@@ -44,7 +44,10 @@ class ViewController: UIViewController {
     @IBAction func button9(_ sender: Any) {
         result.text = result.text!+"9"
     }
-    
+    @IBAction func point(_ sender: Any) {
+        result.text = result.text!+"."
+        
+    }
     @IBAction func ButtonDiv(_ sender: Any) {
         tempflag=4
         temp=Double(result.text!)!
@@ -71,19 +74,21 @@ class ViewController: UIViewController {
     @IBAction func ButtonRes(_ sender: Any) {
         if(tempflag==1){
         temp=temp+Double(result.text!)!
-        result.text="\(temp)"
+        result.text=String(format:"%.6f",temp)
         }
         if(tempflag==2){
             temp=temp-Double(result.text!)!
-            result.text="\(temp)"
+            result.text=String(format:"%.6f",temp)
         }
         if(tempflag==3){
             temp=temp/Double(result.text!)!
-            result.text="\(temp)"
+            //result.text="\(temp)"
+            result.text=String(format:"%.6f",temp)
         }
         if(tempflag==4){
             temp=temp*Double(result.text!)!
-            result.text="\(temp)"
+           // result.text="\(temp)"
+            result.text=String(format:"%.6f",temp)
         }
         
     }
