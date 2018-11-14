@@ -56,11 +56,17 @@ class ViewController: UIViewController {
     @IBAction func ButtonMub(_ sender: Any) {
         tempflag=3
         temp=Double(result.text!)!
-        result.text=""    }
+        result.text=""
+        
+    }
     @IBAction func ButtonAdd(_ sender: Any) {
         tempflag=1
-        temp=Double(result.text!)!
-        result.text=""    }
+        temp=0
+        
+        temp=temp+Double(result.text!)!
+        result.text=""
+        
+    }
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
