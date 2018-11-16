@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
+    var res :Double=0
     var temp:Double=0
     var tempflag=0
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     }
     @IBAction func button1(_ sender: Any) {
         result.text = result.text!+"1"
+        
     }
     @IBAction func button2(_ sender: Any) {
         result.text = result.text!+"2"
@@ -51,25 +53,27 @@ class ViewController: UIViewController {
     @IBAction func ButtonDiv(_ sender: Any) {
         tempflag=4
         temp=Double(result.text!)!
+        temp=temp*Double(result.text!)!
         result.text=""
     }
     @IBAction func ButtonMub(_ sender: Any) {
         tempflag=3
         temp=Double(result.text!)!
+        temp=temp/Double(result.text!)!
         result.text=""
         
     }
     @IBAction func ButtonAdd(_ sender: Any) {
         tempflag=1
-        temp=0
-        
         temp=temp+Double(result.text!)!
         result.text=""
-        
+        result.text=String(temp)
+        result.text=""
     }
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
+        temp=temp-Double(result.text!)!
         temp=Double(result.text!)!
         result.text=""
         
@@ -96,8 +100,9 @@ class ViewController: UIViewController {
            // result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
         }
-        
+        temp=0
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
