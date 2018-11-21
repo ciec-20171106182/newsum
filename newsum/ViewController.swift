@@ -52,13 +52,13 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonDiv(_ sender: Any) {
         tempflag=4
-        temp=Double(result.text!)!
+       
         temp=temp*Double(result.text!)!
         result.text=""
     }
     @IBAction func ButtonMub(_ sender: Any) {
         tempflag=3
-        temp=Double(result.text!)!
+        temp=1
         temp=temp/Double(result.text!)!
         result.text=""
         
@@ -67,13 +67,11 @@ class ViewController: UIViewController {
         tempflag=1
         temp=temp+Double(result.text!)!
         result.text=""
-        result.text=String(temp)
-        result.text=""
     }
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
-        temp=temp-Double(result.text!)!
+        
         temp=Double(result.text!)!
         result.text=""
         
@@ -85,22 +83,25 @@ class ViewController: UIViewController {
         if(tempflag==1){
         temp=temp+Double(result.text!)!
         result.text=String(format:"%.6f",temp)
+            temp=0
         }
         if(tempflag==2){
             temp=temp-Double(result.text!)!
             result.text=String(format:"%.6f",temp)
+            temp=0
         }
         if(tempflag==3){
             temp=temp/Double(result.text!)!
             //result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
+            temp=1
         }
         if(tempflag==4){
             temp=temp*Double(result.text!)!
            // result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
+            temp=1
         }
-        temp=0
     }
     
     override func viewDidLoad() {
