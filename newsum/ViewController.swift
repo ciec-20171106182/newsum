@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
     var res :Double=0
-    var temp:Double=0
+    var temp:Double=1
     var tempflag=0
     
     @IBAction func button0(_ sender: Any) {
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonMub(_ sender: Any) {
         tempflag=3
-        temp=1
+        
         temp=temp/Double(result.text!)!
         result.text=""
         
@@ -71,24 +71,22 @@ class ViewController: UIViewController {
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
-        
         temp=Double(result.text!)!
         result.text=""
-        
     }
     @IBAction func ButtonC(_ sender: Any) {
         result.text=""
     }
     @IBAction func ButtonRes(_ sender: Any) {
         if(tempflag==1){
-        temp=temp+Double(result.text!)!
+        temp=temp-1+Double(result.text!)!
         result.text=String(format:"%.6f",temp)
-            temp=0
+            temp=1
         }
         if(tempflag==2){
-            temp=temp-Double(result.text!)!
+            temp=temp+1-Double(result.text!)!
             result.text=String(format:"%.6f",temp)
-            temp=0
+            temp=1
         }
         if(tempflag==3){
             temp=temp/Double(result.text!)!
