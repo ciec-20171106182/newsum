@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
-        temp=Double(result.text!)!
+        temp=temp-Double(result.text!)!
         result.text=""
     }
     @IBAction func ButtonC(_ sender: Any) {
@@ -101,7 +101,6 @@ class ViewController: UIViewController {
             temp=1
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
