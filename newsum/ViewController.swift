@@ -7,11 +7,17 @@
 //
 
 import UIKit
-
+struct stack{
+    
+}
+struct queue {
+    
+}
 class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
     var res :Double=0
+    var n=0
     var temp:Double=1
     var tempflag=0
     
@@ -52,54 +58,81 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonDiv(_ sender: Any) {
         tempflag=4
-       
-        temp=temp*Double(result.text!)!
+        if(n==0){
+            temp=Double(result.text!)!
+        }
+        else
+        {
+            temp=temp*Double(result.text!)!
+        }
         result.text=""
+        n=n+1
     }
     @IBAction func ButtonMub(_ sender: Any) {
         tempflag=3
-        
-        temp=temp/Double(result.text!)!
+        if(n==0){
+            temp=Double(result.text!)!
+        }
+        else
+        {
+            temp=temp/Double(result.text!)!
+        }
         result.text=""
-        
+        n=n+1
     }
     @IBAction func ButtonAdd(_ sender: Any) {
         tempflag=1
-        temp=temp+Double(result.text!)!
+        
+        if(n==0){
+            temp=Double(result.text!)!
+        }
+        else
+        {
+            temp=temp+Double(result.text!)!
+        }
         result.text=""
+        n=n+1
     }
     
     @IBAction func ButtonSub(_ sender: Any) {
         tempflag=2
-        temp=temp-Double(result.text!)!
+        if(n==0){
+            temp=Double(result.text!)!
+        }
+        else
+        {
+            temp=temp-Double(result.text!)!
+        }
         result.text=""
+        n=n+1
     }
     @IBAction func ButtonC(_ sender: Any) {
         result.text=""
     }
     @IBAction func ButtonRes(_ sender: Any) {
         if(tempflag==1){
-        temp=temp-1+Double(result.text!)!
+        temp=temp+Double(result.text!)!
         result.text=String(format:"%.6f",temp)
             temp=1
         }
         if(tempflag==2){
-            temp=temp+1-Double(result.text!)!
+            temp=temp-Double(result.text!)!
             result.text=String(format:"%.6f",temp)
             temp=1
         }
         if(tempflag==3){
             temp=temp/Double(result.text!)!
-            //result.text="\(temp)"
+            result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
             temp=1
         }
         if(tempflag==4){
             temp=temp*Double(result.text!)!
-           // result.text="\(temp)"
+            result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
             temp=1
         }
+        n=0;
     }
     override func viewDidLoad() {
         super.viewDidLoad()
