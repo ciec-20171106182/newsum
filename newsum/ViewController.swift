@@ -57,54 +57,117 @@ class ViewController: UIViewController {
         
     }
     @IBAction func ButtonDiv(_ sender: Any) {
-        tempflag=4
+        
+        
         if(n==0){
             temp=Double(result.text!)!
+            
         }
         else
         {
-            temp=temp*Double(result.text!)!
+            if(tempflag==1){
+                temp=temp+Double(result.text!)!
+                
+            }
+            if(tempflag==2){
+                temp=temp-Double(result.text!)!
+                
+            }
+            if(tempflag==3){
+                temp=temp/Double(result.text!)!
+                
+            }
+            if(tempflag==4){
+                temp=temp*Double(result.text!)!
+                
+            }
+            
         }
+
         result.text=""
         n=n+1
+        tempflag=4
     }
     @IBAction func ButtonMub(_ sender: Any) {
-        tempflag=3
-        if(n==0){
-            temp=Double(result.text!)!
-        }
-        else
-        {
-            temp=temp/Double(result.text!)!
-        }
-        result.text=""
-        n=n+1
-    }
-    @IBAction func ButtonAdd(_ sender: Any) {
-        tempflag=1
         
         if(n==0){
             temp=Double(result.text!)!
         }
         else
         {
+            if(tempflag==1){
             temp=temp+Double(result.text!)!
+            
+            }
+            if(tempflag==2){
+                temp=temp-Double(result.text!)!
+                
+            }
+            if(tempflag==3){
+                temp=temp/Double(result.text!)!
+                
+            }
+            if(tempflag==4){
+                temp=temp*Double(result.text!)!
+                
+            }
+            
         }
-        result.text=""
+     result.text=""
         n=n+1
+        tempflag=3
     }
-    
-    @IBAction func ButtonSub(_ sender: Any) {
-        tempflag=2
+    @IBAction func ButtonAdd(_ sender: Any) {
+        
+        
         if(n==0){
             temp=Double(result.text!)!
         }
         else
         {
-            temp=temp-Double(result.text!)!
+            if(tempflag==1){
+                temp=temp+Double(result.text!)!
+            }
+            if(tempflag==2){
+                temp=temp-Double(result.text!)!
+            }
+            if(tempflag==3){
+                temp=temp/Double(result.text!)!
+            }
+            if(tempflag==4){
+                temp=temp*Double(result.text!)!
+            }
+            //temp=temp+Double(result.text!)!
         }
-        result.text=""
+      result.text=""
         n=n+1
+        tempflag=1
+    }
+    
+    @IBAction func ButtonSub(_ sender: Any) {
+        
+
+        if(n==0){
+            temp=Double(result.text!)!
+        }
+        else
+        {
+            if(tempflag==1){
+            temp=temp+Double(result.text!)!
+            }
+            if(tempflag==2){
+                temp=temp-Double(result.text!)!
+            }
+            if(tempflag==3){
+                temp=temp/Double(result.text!)!
+            }
+            if(tempflag==4){
+                temp=temp*Double(result.text!)!
+            }
+        }
+   result.text=""
+        n=n+1
+        tempflag=2
     }
     @IBAction func ButtonC(_ sender: Any) {
         result.text=""
@@ -116,22 +179,24 @@ class ViewController: UIViewController {
             temp=1
         }
         if(tempflag==2){
-            temp=temp-Double(result.text!)!
+           temp=temp-Double(result.text!)!
             result.text=String(format:"%.6f",temp)
             temp=1
         }
         if(tempflag==3){
-            temp=temp/Double(result.text!)!
-            result.text="\(temp)"
+           temp=temp/Double(result.text!)!
+            //result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
             temp=1
         }
         if(tempflag==4){
-            temp=temp*Double(result.text!)!
-            result.text="\(temp)"
+          temp=temp*Double(result.text!)!
+            //result.text="\(temp)"
             result.text=String(format:"%.6f",temp)
             temp=1
         }
+        tempflag=0;
+        res=0;
         n=0;
     }
     override func viewDidLoad() {
