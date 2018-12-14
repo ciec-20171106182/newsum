@@ -5,6 +5,7 @@
 //  Created by s20171106182 on 2018/10/27.
 //  Copyright © 2018 s20171106182. All rights reserved.
 //
+import AVFoundation
 
 import UIKit
 struct stack{
@@ -13,6 +14,7 @@ struct stack{
 struct queue {
     
 }
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var result: UITextField!
@@ -20,7 +22,10 @@ class ViewController: UIViewController {
     var n=0
     var temp:Double=1
     var tempflag=0
+    var audioPlayer:AVAudioPlayer!
     
+    
+        
     @IBAction func button0(_ sender: Any) {
         result.text = result.text!+"0"
     }
@@ -199,9 +204,11 @@ class ViewController: UIViewController {
         res=0;
         n=0;
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+ 
     }
 
 
